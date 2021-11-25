@@ -1,0 +1,7 @@
+<ul class="nav flex-column">
+    {% for sideitem in listjobs %}
+        <li class="nav-item">
+            <a class="nav-link" href="{{ sideitem["id"] }}">{{ sideitem["job"] }}</a>
+        </li>
+    {% endfor %}
+</ul>

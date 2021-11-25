@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello JobController!{% endblock %}
+
+{% block body %}
+    <style>
+        h4 {
+            color: #11a3d9;
+        }
+    </style>
+    {% if job is null %}
+        <h1 style="color:#c50000"> NOT FOUND !!!</h1>
+
+    {% else %}
+        <div class="example-wrapper">
+            <h1>{{ job.title }}</h1>
+            <h4>Company: </h4> {{ job.company }}
+            <h4>Description: </h4><h5>{{ job.description }}</h5>
+            <h4>Email: </h4><h5>{{ job.email }}</h5>
+            <h4>Tel: </h4><h5>{{ job.telephone }}</h5>
+            <img src="{{ job.image.url }}" alt='{{ job.image.alt }}'/>
+
+        </div>
+    {% endif %}
+{% endblock %}

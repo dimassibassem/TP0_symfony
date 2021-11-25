@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="example-wrapper">
+        <ul>
+            {% if jobs is empty %}
+                <h2>No Jobs Found!</h2>
+            {% endif %}
+            {% for job in jobs %}
+                <li>
+                    {{ job.title }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
